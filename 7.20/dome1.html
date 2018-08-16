@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>按钮弹窗</title>
+	<script>
+		//给元素添加事件的三种方式
+		/*
+		*都可以首推第三种
+		*
+		*
+		*/
+	</script>
+</head>
+<body>
+	<!-- 第一种：直接在标签中加事件 -->
+	<input type="button" id="btn2" value="按钮" onclick="alert('你好')"/>
+	<!-- 第二种，先获得标签，再添加事件，为微函数写方法 -->
+	<input type="button" id="btn1" value="改良按钮" />
+	<script>
+
+		document.getElementById("btn1").onclick=f1;
+		function f1(){
+			alert("改良弹框");
+		};
+		
+	</script>
+	<!-- 第三种方式是老师推荐用的方法，因为他觉得更好维护，不冲突 -->
+	<input type="button" id="btn" value="终极按钮" />
+	<script>
+		document.getElementById("btn").onclick=function(){
+			alert("终极调用");
+		};
+	</script>
+</body>
+</html>

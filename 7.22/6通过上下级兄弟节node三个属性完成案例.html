@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$方腾无敌$</title>
+	<script>
+		/*
+		*问题与思路
+		*
+		*问题：
+		*为#dv中所有的P标签添加背景，不使用document.getElementByTagName("p")d的方式
+		*
+		*思路：
+		*先可以使用document.getElementById("dv")获得目标
+		*
+		*再使用childNodes（或者children）获得子节点（子元素）
+		*在进行判断筛选出是标签，且名字是p的（判断标签是P）
+		*
+		*最后为该标签增加背景
+		*
+		*/
+	</script>
+</head>
+<body>
+	<div id="dv">
+		<span>这是一个span标签</span>
+		<p>这是一个P标签</p>
+		<a href="#">这是一个超链接</a>
+		<p>这是一个P标签</p>
+		<ul>
+			<li>
+				<p>lalalal</p>
+			</li>
+			<li>
+				<h1>lalalal</h1>
+			</li>
+			<li>
+				<p>lalalal</p>
+			</li>
+		</ul>
+		<h1>这是一个标题</h1>
+		<p>这是一个P标签</p>
+		<h2>这是二号标题</h2>
+		<p>这是一个P标签</p>
+		<h3>这是三号标题</h3>
+	</div>
+	<script src="comment.js"></script>
+	<script>
+		var dot=my$("dv");
+		function f1(){
+			var nodeArr=dot.childNodes;
+			for(var i=0;i<nodeArr.length;i++){
+				if(nodeArr[i].nodeType==1&&nodeArr[i].nodeName=="P"){
+					nodeArr[i].style.backgroundColor="deepskyblue";
+				}
+			}
+		}
+		function f2(){
+			var eleArr=dot.children;
+			for(var i=0;i<eleArr.length;i++){
+				if(eleArr[i].nodeName=="P"){
+					eleArr[i].style.backgroundColor="red";
+				}
+			}
+		}
+
+
+	</script>
+</body>
+</html>

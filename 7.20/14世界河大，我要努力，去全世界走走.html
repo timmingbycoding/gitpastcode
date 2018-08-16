@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>try my best to do it well </title>
+	<style>
+		.dream{
+			width: 300px;
+			height: 600px;
+			background: #0f0;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="改变"  id="change" />
+	<input type="button" value="展示"  id="show" />
+	<input type="button" value="隐藏"  id="hidden" />
+	
+	<div class="dream">
+		这是一片浩瀚的海洋
+	</div>
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+		my$("show").onclick=function(){
+			var tag=document.getElementsByClassName("dream");
+			tag[0].style.display="block";
+		}
+		my$("hidden").onclick=function(){
+			var tag=document.getElementsByClassName("dream");
+			tag[0].style.display="none";
+		}
+		my$("change").onclick=function(){
+			var tag=document.getElementsByClassName("dream");
+			tag[0].style.width="300px";
+			tag[0].style.height="400px";
+			tag[0].style.backgroundColor="deepskyblue";
+			tag[0].innerText=" ";
+		};
+	</script> 
+</body>
+</html>

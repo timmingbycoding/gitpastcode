@@ -1,0 +1,12 @@
+*{
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-transition: background 200ms;
+	-o-transition:background 200ms;
+	transition:background 200ms; 
+}
+body{
+	
+}
+
+

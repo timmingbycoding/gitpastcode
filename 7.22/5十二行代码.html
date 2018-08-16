@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$十二行代码$</title>
+	<script>
+		/*
+		*parentNode
+		*ParentElement
+		*childNodes
+		*children
+		*firstChild
+		*firstElementChild
+		*lastChild
+		*lastElementChild
+		*previousSibling
+		*previousElementChild
+		*nextSibling
+		*nextElementSibling
+		*/
+	</script>
+</head>
+<body>
+	<div id="dv">
+		<span>江西</span>
+		<a href="#">上饶</a>
+		<ul>
+			<li>上海</li>
+			<li>广东</li>
+			<li id="szCity">深圳</li>
+			<li>武汉</li>
+			<li>长沙</li>
+			<li>太原</li>
+		</ul>
+	</div>
+	<script src="comment.js"></script>
+	<script>
+		var demo=my$("dv");
+		//父亲节点parentNode
+		console.log(demo.parentNode);
+		//父亲元素parentElemnet
+		console.log(demo.parentElement);
+		//孩子节点
+		console.log(demo.childNodes);
+		//孩子元素
+		console.log(demo.children);
+		console.log("+++++++++++++++++++++++++++++++++++++++++++++");
+		//第一个子节点
+		console.log(demo.firstChild);
+		//第一个子元素
+		console.log(demo.firstElementChild);
+		//最后一个子节点
+		console.log(demo.lastChild);
+		//最后一个子元素
+		console.log(demo.lastElementChild);
+		//前一个兄弟的节点previousSibling
+		console.log(my$("szCity").previousSibling);
+		//前一个兄弟元素previousElementSibling
+		console.log(my$("szCity").previousElementSibling);
+		//后一个兄弟节点
+		console.log(my$("szCity").nextSibling);
+		//后一个兄弟元素
+		console.log(my$("szCity").nextElementSibling);
+	</script>		
+</body>
+</html>

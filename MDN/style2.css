@@ -1,0 +1,22 @@
+/*** CSS 手册: 颜色页面 ***/
+
+/* 页面 字体 */
+body {
+	background: url("Blue-rule.png");
+	font: 16px "Comic Sans MS", cursive;}
+
+/* 段落 */
+p {
+	
+	color: rgb(0,0,255);}
+#first {font-style: italic;}
+
+/* 首字母 */
+strong {
+  color: rgb(255,0,0);
+  background-color: rgb(144,144,255);
+  font: 200% serif;
+  }
+
+.carrot {color: rgb(255,0,0);}
+.spinach {color: rgb(0,255,0);} 

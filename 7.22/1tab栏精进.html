@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab栏</title>
+	<style>
+		.tab{
+			width: 300px;
+			height: 400px;
+			margin: 0 auto;
+			background: red;
+		}
+		.head span{
+			/*display: none;*/
+			width: 80px;
+			height: 50px;
+			float: left;
+			background: pink;
+		}
+		.head .cls{
+			background: deepskyblue;
+		}
+		.head:before,.head:after{
+			content:"";
+			display: table;
+		}
+		.head:after{
+			clear:both;
+		}
+		.body div{
+			width: 300px;
+			height: 350px;
+			display: none;
+		}
+		.body .cls{
+			display: block;
+			background: deepskyblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		<div class="head">
+			<span class="cls">学生1</span>
+			<span >学生2</span>
+			<span>学生3</span>
+		</div>
+		<div class="body">
+			<div>学生大事件···1</div>
+			<div class="cls">学生大事件···2</div>
+			<div>学生大事件···3</div>
+		</div>
+	</div>
+</body>
+</html>

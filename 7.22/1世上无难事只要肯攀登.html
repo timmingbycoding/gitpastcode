@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$java script可以学的很好$</title>
+</head>
+<body>
+	<div id="vd">
+		<span>盲圣盲圣</span>
+		<a href="#">Newbee</a>
+		<ul id="uu">
+			<li>段誉</li>
+			<li>玲珑</li>
+			<li id="mid">王朝</li>
+			<li>马汉</li>
+			<li>林书豪</li>
+		</ul>
+	</div>
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+	<script>
+		var sun=my$("vd");         //输入vd
+		console.log(sun);
+		//parentNode，父亲节点
+		console.log(sun.parentNode);
+		//parentElement，父亲元素
+		console.log(sun.parentElement);
+		//子节点childNodes
+		console.log(sun.childNodes);
+		//子元素childElements
+		console.log(sun.children);
+		//第一个子节点fristchild
+		console.log(sun.firstChild);
+		//第一个子元素firstElementChild
+		console.log(sun.firstElementChild);
+		//最后一个子节点
+		console.log(sun.lastChild);
+		//最后一个子元素
+		console.log(sun.lastElementChild);
+		//前一个兄弟节点previousSibling
+		console.log(my$("mid").previousSibling);
+		//前一个兄弟元素previousElementSibling
+		console.log(my$("mid").previousElementSibling);
+		//后一个兄弟节点nextSibling 
+		console.log(my$("mid").nextSibling);
+		//后一个兄弟元素nextElementSibling
+		console.log(my$("mid").nextElementSibling);
+	</script>
+</body>
+</html>

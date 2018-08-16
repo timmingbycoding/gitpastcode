@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+	<title>$解绑事件</title>
+</head>
+<body>
+	<input type="button" value="方翔" id="btn1" />
+	<input type="button" value="不是方翔" id="btn2" />
+	<script>
+		//第一种
+		// my$("btn1").onclick=function(){
+		// 	console.log("我叫方翔，清华大学高材生！");
+		// };
+		// my$("btn2").onclick=function(){
+		// 	my$("btn1").onclick=null;
+		// };
+		function f1(){
+			console.log("我是清华大学的高材生，我最强，我会讲课");
+		}
+		my$("btn1").addEventListener("click",f1,false);
+		my$("btn1").addEventListener("click",function(){
+			console.log("清华大学的高材生，我很皮的，我会讲课");
+		},false);
+		my$("btn2").addEventListener("click",function(){
+			my$("btn1").removeEventListener("click",f1,false );
+		},false)
+	</script>
+</body>
+</html>

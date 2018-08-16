@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>将军</title>
+
+</head>
+<body>
+		<a href="img/a.jpg"><img src="img/b.jpg" alt="" /></a>
+		<!-- //点击图片修改图片 -->
+		<script>
+			document.getElementsByTagName("img")[0].onclick=function(){
+				document.getElementsByTagName("img")[0].src=document.getElementsByTagName("a")[0].href;
+				return false;
+			};
+		</script>
+</body>
+</html>

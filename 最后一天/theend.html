@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>最后一天</title>
+	<script src="commen.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			/*transition: all 1s;*/
+		}
+		#dv{
+			width: 500px;
+			height: 282px;
+			margin: 200px auto;
+			position: relative;
+			border:1px solid gray;
+			padding: 5px;
+		}
+		#btn{
+			list-style: none;
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+		#btn li{
+			display: block;
+			width: 20px;	
+			height: 20px;
+			background-color: #ff5000;
+			color:#eee;
+			border-radius: 10px;
+			font-size: 16px;
+			text-align: center;
+			float: left;
+			cursor: pointer;
+			margin-left: 10px;
+		}
+		#btn li.cla{
+			background-color: #EEE;
+			color:#ff5000;
+		}
+		#btn1,#btn2{
+			width: 40px;
+			height: 60px;
+			line-height: 60px;
+			font-size: 60px;
+			color: #0ff;
+			position: absolute;
+			top:50%;
+			margin-top: -30px;
+			background-color: rgba(0,0,0,.3);
+			border:0;
+		}
+		#btnbox {
+			display: none;
+		}
+		#btn1{
+			left:10px;
+		}
+		#btn2{
+			right:10px;
+		}
+		#imgbox{
+			width: 500px;
+			height: 282px;
+			position: relative;
+			overflow: hidden;
+		}
+		#imgbox ul{
+			width: 4000px;
+			position: absolute;
+		}
+		#imgbox img{
+			width: 500px;
+		}
+		#imgbox li{
+			list-style: none;
+
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div id="dv">
+		<div id="imgbox">
+			<ul>
+				<li><img src="img/武庚纪1.png" alt="武庚纪"></li>
+				<li><img src="img/武庚纪2.png" alt="武庚纪"></li>
+				<li><img src="img/武庚纪3.png" alt="武庚纪"></li>
+				<li><img src="img/武庚纪4.png" alt="武庚纪"></li>
+				<li><img src="img/武庚纪5.png" alt="武庚纪"></li>
+				<li><img src="img/武庚纪6.png" alt="武庚纪"></li>
+				<li><img src="img/武庚纪7.png" alt="武庚纪"></li>
+			</ul>
+		</div>
+		<div id="btnbox">
+			<input type="button" value="<" id="btn1" />
+			<input type="button" value=">" id="btn2" />
+		</div>
+		<ul id="btn">
+			
+		</ul>
+	</div>
+	<script>
+		var imgUlObj=my$("imgbox").firstElementChild;
+		// console.log(imgUlObj);
+		var imgSons=imgUlObj.children;
+		// console.log(imgSons);
+		var locationX=imgUlObj.offsetLeft;
+		var btnn=my$("btn");
+		function chang(index){
+			var libtn=btnn.children;
+			for(var j=0;j<libtn.length;j++){
+				libtn[j].removeAttribute("class");
+			}
+			libtn[index].className="cla";
+		}
+		for(var i=0;i<imgSons.length;i++){
+			var liObj=document.createElement("LI");
+			liObj.innerText=i+1;
+			my$("btn").appendChild(liObj);
+			liObj.onclick=function(){
+				// var j=i;
+				imgUlObj.style.left=-parseInt(this.innerText)*500+500+"px";
+				chang(parseInt(this.innerText)-1);
+			};
+		}
+		my$("imgbox").firstElementChild.appendChild(imgSons[0].cloneNode(true));
+		var timemove=setInterval(move,100);
+		
+		function move(){
+			
+			locationX-=10;
+			
+			if(locationX>-3500){
+				imgUlObj.style.left=locationX+"px";
+
+			}else{
+				imgUlObj.style.left="0px";	
+				locationX=0;			
+			}
+			var x=-locationX;
+			x=parseInt(x/500);
+			chang(x);
+		}
+		my$("dv").onmouseover=function(){
+			var xl=-imgUlObj.offsetLeft;
+			clearInterval(timemove);
+			var xl=parseInt(xl/500);
+			imgUlObj.style.left=-xl*500+"px";
+			my$("btnbox").style.display="block";
+		};
+		my$("dv").onmouseout=function(){
+			timemove=setInterval(move,100);
+			my$("btnbox").style.display="none";
+		};
+		my$("btn1").onclick=function(){
+			var lx=imgUlObj.offsetLeft;
+			if(lx<0){
+				standardMove(imgUlObj,lx+500);
+				chang(parseInt(-lx/500-1));
+			}else{
+				imgUlObj.style.left="-3000px";
+				chang(6);
+			}
+		};
+		my$("btn2").onclick=function(){
+			var lx=imgUlObj.offsetLeft;
+			if(lx>-3000){
+				standardMove(imgUlObj,lx-500);
+				chang(parseInt(-lx/500+1));
+			}else{
+				imgUlObj.style.left="0px";
+				chang(0);
+			}
+		};
+
+	</script>
+	<script>
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$javascript is easy$</title>
+</head>
+<body>
+	<input type="button" id="btu1" value="修改"/>
+	<input type="radio" value="0" name="sxe" id="slc" />男
+	<input type="radio" value="1" name="sxe"  />女<br />
+	<input type="button" id="but2" value="修改"/>
+	<input type="checkbox" value="0" name="scc" />英语
+	<input type="checkbox" value="1" name="scc" id="math" />数学
+	<input type="checkbox" value="2" name="scc" />法语 
+	<input type="checkbox" value="3" name="scc" id="sd" />得遇
+	<input type="checkbox" value="4" name="scc"  />海域<br />
+	<script>
+		function my$(id){
+			return	document.getElementById(id);
+		}
+		function myId(tagName){
+			return	document.getElementsTagName(tagName);
+		}
+		// my$("btu1").onclick=function(){
+		// 	for(var key in myId("input") )
+		// 	if(myId("input")[key].type=="radio"&&myId("input")[key].value=="0"){
+		// 		myId("input")[key].checked=true;
+		// 	}
+		// };
+		my$("btu1").onclick=function(){
+			my$("slc").checked=true;
+		};
+		my$("but2").onclick=function(){
+			my$("math").checked=true;
+			my$("sd").checked=true;
+		};
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹框￥JavaScript很简单￥</title>
+	<style>
+		img{
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="这次不需要button" /><br />
+	<img src="img/a.jpg" alt="" title="我的天" />
+	<img src="img/b.jpg" alt="" title="我的天" />
+	<img src="img/c.jpg" alt="" title="我的天" />
+	<img src="img/d.jpg" alt="" title="我的天" />
+	<img src="img/e.jpg" alt="" title="我的天" />
+	<img src="img/f.jpg" alt="" title="我的天" />
+	<img src="img/g.jpg" alt="" title="我的天" />
+	<img src="img/h.jpg" alt="" title="我的天" />
+	<img src="img/i.jpg" alt="" title="我的天" />
+	<img src="img/j.jpg" alt="" title="我的天" />
+	<img src="img/k.jpg" alt="" title="我的天" />
+	<img src="img/l.jpg" alt="" title="我的天" />
+	<script>
+		var imObj=document.getElementsByTagName("img");
+		for(var key in imObj){
+			imObj[key].onclick=function(){
+				alert("我是美女");
+			}
+		}
+	</script>
+</body>
+</html>

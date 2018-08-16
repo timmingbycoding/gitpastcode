@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$javajscript很简单的$</title>
+</head>
+<body>
+	<input type="button" id="but" value="更爱位子" />
+	<p id="im">你好，欢迎来到Javascript大事件</p>
+	<script>
+		
+		// 获得button，为button添加事件
+		var obj= document.getElementById("but");
+		obj.onclick=function(){
+			//获得皮标签，为p标签，更爱皮标签内容
+			var imObj=document.getElementById("im");
+			imObj.innerText="javajscript很简单的,可以俗称JS";
+		};
+	</script>
+</body>
+</html>

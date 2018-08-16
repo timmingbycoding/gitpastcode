@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>display 的js操作</title>
+	<style>
+		.sll{
+			width: 100px;
+			height: 100px;
+			background: #00f;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="隐藏" id="but" />
+	<div class="sll">
+		
+	</div>
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+		my$("but").onclick=function(){
+			var abt=document.getElementsByClassName("sll")[0];
+			console.log(abt);
+			if(my$("but").value=="隐藏"){
+				abt.style.display="none";
+				my$("but").value="展示";
+			}else if(my$("but").value=="展示"){
+				abt.style.display="block";
+				abt.style.backgroundColor="deepskyblue";
+				my$("but").value="隐藏";
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>插入元素的三个方法</title>
+	<script>
+		function fi(){
+			document.write("<h1>这是一个标题</h1>");
+		}
+	</script>
+	<style>
+		div{
+			width: 1000px;
+			height: 1000px;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<input type="button"  value="按钮1" id="btn1"/>
+	<input type="button" id="btn2" value="按钮2" />
+	<input type="button" value="按钮3" id="btn3" />
+	<div id="di"></div>
+	<script src="comment.js"></script>
+	<script>
+		my$("btn1").onclick=function(){
+			my$("di").innerHTML="<h1>辅助</h1>";
+		};
+		// var aP=document.createElement("P");   //放在这没用系统只创建了一个p标签
+		// aP.innerText="我不是药神";
+		// console.log(aP);
+		my$("btn2").onclick=function(){
+			var aP=document.createElement("P");
+			aP.innerText="我不是药神";
+			my$("di").appendChild(aP);
+		};
+	</script>
+</body>
+</html>

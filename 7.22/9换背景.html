@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>换背景</title>
+	<style>
+		body{
+			background: url("img/1.jpg") no-repeat top;
+		}
+		#top{
+			height: 200px;
+			margin-top: 50px;
+			background: rgba(255,255,255,.2);
+		}
+		#top img{
+			margin-top: 20px;
+			height: 160px;
+		}
+	</style>
+</head>
+<body id="bd">
+	<div id="top">
+		<img src="img/1.jpg" alt="美女">
+		<img src="img/2.jpg" alt="美女">
+		<img src="img/3.jpg" alt="美女">
+		<img src="img/4.jpg" alt="美女">
+		<img src="img/5.jpg" alt="美女">
+	</div>
+	<script src="comment.js"></script>
+	<script>
+		var imArr=my$("top").children;
+		for(var i=0;i<imArr.length;i++){
+			imArr[i].onclick=function(){
+				my$("bd").style.backgroundImage="url("+this.src+")";
+			};
+		}
+	</script>
+</body>
+</html>

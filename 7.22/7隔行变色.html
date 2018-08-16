@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$隔行变色$</title>
+	<style>
+		ul{
+			background: red;
+		}
+	</style>
+	<script src="comment.js"></script>
+</head>
+<body>
+	<ul id="uu">
+		<li>江城子·密州出猎</li>
+		<li>江城子·密州出猎</li>
+		<li>江城子·密州出猎</li>
+		<li>江城子·密州出猎</li>
+		<li>江城子·密州出猎</li>
+		<li>江城子·密州出猎</li>
+		<li>江城子·密州出猎</li>
+		<li>江城子·密州出猎</li>
+		<li>江城子·密州出猎</li>
+		<li>江城子·密州出猎</li>
+	</ul>
+	<script>
+		var liArr=my$("uu").childNodes;
+		var tagArr=[];
+		for(var i=0;i<liArr.length;i++){
+			if(liArr[i].nodeType==1&&liArr[i].nodeName=="LI"){tagArr.push(liArr[i]);}
+		}
+		for(var j=0;j<tagArr.length;j++){
+			if(j%2==1){
+				tagArr[j].style.backgroundColor="blue";
+			}else if(j%2==0){
+				tagArr[j].style.backgroundColor="deepskyblue";
+			}
+		}
+	</script>
+</body>
+</html>

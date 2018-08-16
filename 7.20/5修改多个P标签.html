@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$JSis简单$</title>
+</head>
+<body>
+	<input type="button" id="btu" value="更改多个P标签内容" />
+	<p>我叫方翔，清华大学研究生`</p>
+	<p>我叫方翔，清华大学研究生`</p>
+	<p>我叫方翔，清华大学研究生`</p>
+	<p>我叫方翔，清华大学研究生`</p>
+	<p>我叫方翔，清华大学研究生`</p>
+	<script>
+		//获得button标签，为标签添加点击使事件
+		document.getElementById("btu").onclick=function(){
+			var pObj= document.getElementsByTagName("p");
+			for(var key in pObj){
+				pObj[key].innerText="江山如此多娇";
+			}
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$$方腾加油</title>
+</head>
+<body>
+	<input type="button" value="按钮" id="btn" />
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		} 
+	</script>
+	<script>
+		// my$("btn").addEventListener("click",function(){
+		// 	console.log("添加事件");
+		// },false)
+		my$("btn").attachEvent("onclick",function(){
+			console.log("IE8支持的方法");
+		});
+	</script>
+</body>
+</html>

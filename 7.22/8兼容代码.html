@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$代码兼容 $</title>
+</head>
+<body>
+	<ul id="bb">
+		<li>李白</li>
+		<li>宴会</li>
+		<li>杀生</li>
+	</ul>
+	<script src="comment.js"></script>
+	<script>
+		function getFirstElementChild(ele){
+			if(ele.firstElementChild){
+				var node=ele.firstElementChild;
+			}else{
+				var node=ele.firstChild;
+				while(node&&node.Type!=1){
+					node=node.nextSibling;
+				}
+			}
+			
+			return node;
+		}
+		//
+		console.log(getFirstElementChild(my$("bb")).innerText);
+	</script>
+</body>
+</html>

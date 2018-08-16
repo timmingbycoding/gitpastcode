@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>&javascript很简单的!$</title>
+</head>
+<body>
+	<input type="button" id="but" value="看图" />
+	<img src="" alt="" id="im" />
+	<script>
+		// 找到but按钮，添加事件onclick，
+		var obj1=document.getElementById("but");
+		obj1.onclick=function(){
+			//事件内容：获得图片，为图片添加src
+			var obj2= document.getElementById("im");
+			obj2.src="img/ft.jpg";
+			obj2.alt="不存在的图片";
+			obj2.width=300;
+			obj2.height=400;
+			obj2.style.backgroundColor="deepskyblue";
+
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节点理解</title>
+	<script>
+		/*
+		提出问题获取div中所有的 标签，并为其添加背景颜色
+		*/
+	</script>
+</head>
+<body>
+	<input type="button" value="变色" id="vd" />
+	<div  id="dv">
+		<span>这是一个span</span>
+		<a href="#"> 这是一个超链接</a>
+		<p>这是一个p标签</p>
+		<h1>这是一个大号标题</h1>
+	</div>
+	<script src="comment.js"></script>
+	<script>
+		my$("vd").onclick=function(){
+			var bgc= my$("dv").children;
+			// console.log(bgc);
+			for(var i=0;i<bgc.length;i++){
+				bgc[i].style.backgroundColor="deepskyblue";
+			}
+		};
+	</script>
+</body>
+</html>

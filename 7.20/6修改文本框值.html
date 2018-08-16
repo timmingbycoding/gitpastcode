@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>&js 不过如此&</title>
+</head>
+<body>
+	<input type="text" />
+	<input type="text" />
+	<input type="text" />
+	<input type="button" value="我是按钮" id="江山"/>
+	<input type="text" />
+	<input type="text" />
+	<input type="text" />
+	<input type="text" />
+	<input type="text" />
+	<input type="text" />
+	<input type="text" />
+	<script>
+
+		var bObj=document.getElementById("江山");
+		bObj.onclick=function(){
+			var teObj=document.getElementsByTagName("input");
+			for(var i in teObj){
+				if(teObj[i].type!="button"){
+					teObj[i].value="我进行了修改";
+				}	
+			}	
+		};
+	</script>
+</body>
+</html>
