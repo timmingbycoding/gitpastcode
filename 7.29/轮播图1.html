@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<script src="commen.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#top{
+			width: 510px;
+			height: 292px;
+			margin: 100px auto;
+			border:1px solid gray;
+		}
+		#box{
+			/*margin: 100px auto;*/
+			width: 500px;
+			height: 282px;
+			/*padding: 5px;*/
+			border:5px solid #FFF ;
+			overflow: hidden;
+			position: relative;
+		}
+		ul{
+			width: 3500px;
+			position: absolute;
+			left :0px;
+		}
+		li{
+			display: block;
+			list-style: none;
+			float: left;
+		}
+		img{
+			width: 500px;
+		}
+		#btnleft,#btnright{
+			width: 20px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			font-size: 20px;
+			color: #fff;
+			background-color: rgba(0,0,0,.5);
+			position: absolute;
+			
+			top:50%;
+			margin-top: -15px;
+			border: 0;
+		}
+		#focus{
+			/*display: none;*/
+
+		}
+		#btnleft{
+			left:0px;
+		}
+		#btnright{
+			right: 0px;
+
+		}
+		#btn{
+			position: absolute;
+			display: block;
+			bottom: 10px;
+			left:50%;
+			margin-left: -50%;
+			/*right: 100px;*/
+			/*width: 100px;*/
+			/*height: 20px;*/
+			/*background-color: rgba(0,255,0,.8);*/
+		}
+		#btn li{
+			width: 20px;
+			height: 20px;
+			border: 1px solid #111;
+			margin-right: 10px;
+			background-color: #0ff;
+			text-align: center;
+			cursor: pointer;
+		}
+		#btn li:hover{
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<div id="top">
+		<div id="box">
+		<ul id="imgge">
+			<li class="choise"><img src="img/top1.jpg" alt="一张突变"></li>
+			<li><img src="img/top2.jpg" alt="一张突变"></li>
+			<li><img src="img/top3.jpg" alt="一张突变"></li>
+			<li><img src="img/top4.jpg" alt="一张突变"></li>
+			<li><img src="img/top5.jpg" alt="一张突变"></li>
+			<li><img src="img/top6.jpg" alt="一张突变"></li>
+			<li><img src="img/top1.jpg" alt="一张突变"></li>
+		</ul>
+		<div id="focus">
+			<input type="button" id="btnleft" value="<" />
+			<input type="button" id="btnright" value=">" />			
+		</div>
+		<ul id="btn">
+			
+		</ul>
+	</div>
+	</div>	
+	<script>
+		var box=my$("box");
+
+		var imgulObj=box.firstElementChild.children;
+		// console.log(imgulObj);
+		var ulObj=my$("imgge");
+		var luObj=ulObj.children;
+		var s=ulObj.offsetLeft;
+		var btn=box.lastElementChild;
+
+		my$("btnleft").onclick=function(){
+			//获得当前的位置
+			var b=ulObj.offsetLeft;
+			if(b<0){
+				b=b+500
+				ulObj.style.left=b+"px";
+			}else{
+				ulObj.style.left="-2500px";
+			}
+			
+		};
+		
+		my$("btnright").onclick=function(){
+			var b=ulObj.offsetLeft;
+			if(b>-2500){
+				b=b-500
+				ulObj.style.left=b+"px";
+			}else{
+				ulObj.style.left="0px";
+			}
+			
+		};
+		
+		for(var i=0;i<luObj.length-1;i++){
+			var liObj=document.createElement("li");
+			liObj.innerText=i+1;
+			// liObj.style.cursor="pointer";
+			btn.appendChild(liObj);
+			liObj.onclick=function(){
+				var xnum=-parseInt(this.innerText)*500+500;
+				ulObj.style.left=xnum+"px";
+
+			};
+
+		}
+		function fun(){
+			s-=10;
+			if(s>-3000){
+				ulObj.style.left=s+"px";
+			}else{
+				ulObj.style.left="0px";
+				s=0;
+			}
+		}
+		var time1=setInterval(fun,100);
+		my$("box").onmouseover=function(){
+			var a=-ulObj.offsetLeft;
+			var b=parseInt(a/500);
+			ulObj.style.left=-b*500+"px";
+			my$("focus").style.display="block";
+			clearInterval(time1);
+		};
+		my$("box").onmouseout=function(){
+			time1=setInterval(fun,100)
+			my$("focus").style.display="none";
+		};
+	</script>
+</body>
+</html>

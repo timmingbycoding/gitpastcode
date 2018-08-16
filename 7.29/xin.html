@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>改变高度</title>
+	<script src="commen.js"></script>
+	<style>
+		#dv{
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="改高" id="btn" />
+	<div id="dv"></div>
+	<script>
+		
+		my$("btn").onclick=function(){
+			var h=100;
+			var neaw=setInterval(function (){
+				h+=10;
+				my$("dv").style.height=h+"px";
+				if(h>500){
+					clearInterval(neaw);
+				}
+			},100)
+		};
+	</script>
+</body>
+</html>

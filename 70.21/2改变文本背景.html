@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>￥JavaScript市容樱学的</title>
+</head>
+<body>
+	<input type="button" value="改变背景色" id="but" />
+	<ul>
+		<li>wo是一些文本</li>
+		<li>wo是一些文本</li>
+		<li>wo是一些文本</li>
+		<li>wo是一些文本</li>
+		<li>wo是一些文本</li>
+		<li>wo是一些文本</li>
+		<li>wo是一些文本</li>
+		<li>wo是一些文本</li>
+		<li>wo是一些文本</li>
+		<li>wo是一些文本</li>
+	</ul>
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+		my$("but").onclick=function(){
+			var listts=document.getElementsByTagName("ul");
+			for(var key in listts){
+				listts[key].style.backgroundColor="deepskyblue";
+			}
+		};
+	</script>
+</body>
+</html>

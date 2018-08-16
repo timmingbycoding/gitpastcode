@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<script src="commen.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			margin: 100px auto;
+			width: 500px;
+			height: 282px;
+			padding: 5px;
+			border:1px solid gray;
+			overflow: hidden;
+			position: relative;
+		}
+		ul{
+			width: 3500px;
+			position: absolute;
+			left :0px;
+		}
+		li{
+			display: block;
+			list-style: none;
+			float: left;
+		}
+		img{
+			width: 500px;
+		}
+		#btnleft,#btnright{
+			width: 20px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			font-size: 20px;
+			color: #fff;
+			background-color: rgba(0,0,0,.5);
+			position: absolute;
+			
+			top:50%;
+			margin-top: -15px;
+			border: 0;
+		}
+		#focus{
+			display: none;
+		}
+		#btnleft{
+			left:0px;
+		}
+		#btnright{
+			right: 0px;
+		}
+		#btn{
+			position: absolute;
+			display: block;
+			bottom: 10px;
+			/*right: 100px;*/
+			/*width: 100px;*/
+			/*height: 20px;*/
+			background-color: rgba(0,255,0,.8);
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul id="imgge">
+			<li class="choise"><img src="img/top1.jpg" alt="一张突变"></li>
+			<li><img src="img/top2.jpg" alt="一张突变"></li>
+			<li><img src="img/top3.jpg" alt="一张突变"></li>
+			<li><img src="img/top4.jpg" alt="一张突变"></li>
+			<li><img src="img/top5.jpg" alt="一张突变"></li>
+			<li><img src="img/top6.jpg" alt="一张突变"></li>
+			<li><img src="img/top1.jpg" alt="一张突变"></li>
+		</ul>
+		<div id="focus">
+			<input type="button" id="btnleft" value="<" />
+			<input type="button" id="btnright" value=">" />			
+		</div>
+		<ul id="btn">
+			
+		</ul>
+	</div>	
+	<script>
+		var box=my$("box");
+
+		var imgulObj=box.firstElementChild.children;
+		// console.log(imgulObj);
+		var ulObj=my$("imgge");
+		var s=ulObj.offsetLeft;
+		var btn=box.lastElementChild;
+		for(var i=0;i<ulObj.length-1;i++){
+			var liObj=document.createElement("li");
+			liObj.innerText=i+1;
+			liObj.height=8+"px";
+			liObj.width=8+"px";
+			btn.appendChild(liObj);
+
+		}
+		function fun(){
+			s-=10;
+			if(s>-3000){
+				ulObj.style.left=s+"px";
+			}else{
+				ulObj.style.left="0px";
+				s=0;
+			}
+		}
+		var time1=setInterval(fun,100);
+		my$("box").onmouseover=function(){
+			my$("focus").style.display="block";
+			clearInterval(time1);
+		};
+		my$("box").onmouseout=function(){
+			time1=setInterval(fun,100)
+			my$("focus").style.display="none";
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+	<script src="commen.js"></script>
+
+</head>
+<body>
+	<textarea name="放心" id="nb" cols="30" rows="10">
+		是兄弟就来砍我
+	</textarea>
+	<input type="button" id="btn" value="请仔细阅读(5)" disabled=true />
+	<script>
+		var time=5;
+		
+			var setT=setInterval(function(){
+				my$("btn").value="请仔细阅读("+time+")";
+				time--;
+				if(time<=0){
+					clearInterval(setT);
+					my$("btn").value="同意";
+					my$("btn").disabled=false;
+					return;
+				}
+			},1000);
+			
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自己的最大值</title>
+	<script>
+		function MyMath(){
+			this.getMax=function(){
+				var max=arguments[0];
+				for(var i=0;i<arguments.length;i++){
+					max=max>arguments[i]?max:arguments[i];
+				}
+				return max;
+			};
+		}
+		var a=new MyMath();
+		var resurt= a.getMax(1,22,55,525,10,184,44);
+		console.log(resurt);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>工厂是创建对象</title>
+	<script>
+		function creatPerson( name,age){
+			var obj =new Object();
+			obj.name= name;
+			obj.age=age;
+			obj.sayHi=function(){
+				console.log("婊子，你们好！我叫"+this.name+"谢谢大家捧场！我今年："+this.age+"岁！");
+			};
+			return obj;
+		}
+		var fangTeng=creatPerson("方腾",25 );
+		fangTeng.sayHi();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

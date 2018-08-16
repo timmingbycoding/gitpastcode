@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forbid text</title>
+</head>
+<body>
+	<input type="button" value="forbid" id="but" />
+	<input type="text" id="tet" value="江山有泪" disabled="true" />
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+		my$("but").onclick=function(){
+			// if(my$("tet").disabled=="false"){
+			// 	my$("tet").disabled="true";
+			// 	this.value="可以睡人"；
+			// }else if(my$("tet").disabled=="true"){
+			// 	my$("tet").disabled="false";
+			// 	this.value="禁止输入"；
+			// }
+			my$("tet").disabled=false;
+			this.value="成功了";
+		};
+	</script>	
+</body>
+</html>

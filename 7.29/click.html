@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冒泡</title>
+	<script src="commen.js"></script>
+	<script>
+		//事件分三个阶段
+		// 捕获---有内向外
+		// 目标---开始相应
+		// 冒泡---由外向内
+		// 终结冒泡的方法：
+		// 两种方法
+		// 1-----windowcancelBubble
+		// 2-----试下return
+		// 3----e.stopPropagation
+		// 4----event.cancelBubble=true
+		检测事件进行到哪一步了
+		e.
+	</script>
+	<style>
+		#father{
+			width: 500px;
+			height: 500px;
+			background-color: red ;
+		}
+		#son1{
+			width: 300px;
+			height: 300px;
+			background-color: blue;
+		}
+		#son2{
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="father">
+		<div id="son1">
+			<div id="son2"></div>
+		</div>
+	</div>
+	<script>
+		// my$("son1").onclick=function(e){
+		// 	console.log("我是中间位置");
+		// 	// window.event.cancelBubble=true;
+		// 	console.log(e.eventPhase);
+		// };
+		// my$("son2").onclick=function(e){
+		// 	console.log("我是里面位置");
+		// 	// return false;
+		// 	// e.stopPropagation();
+		// 	console.log(e.eventPhase);
+		// };
+		// my$("father").onclick=function(e){
+		// 	console.log("我是最外层位置");
+		// 	console.log(e.eventPhase);
+		// };
+		function f1(e){
+			console.log(this.id+e.eventPhase);
+		}
+		my$("son2").addEventListener("click",f1,true);
+		my$("son1").addEventListener("click",f1,true);
+		my$("father").addEventListener("click",f1,true);
+	</script>
+</body>
+</html>

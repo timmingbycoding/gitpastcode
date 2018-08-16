@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>颜色渐变</title>
+	<script src="commen.js"></script>
+	<style>
+		#dv{
+			width: 200px;
+			height: 100px;
+			border-radius: 50%;
+			background-color: hotpink;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn" value="变色" />
+	<div id="dv"></div>
+	<script>
+		my$("btn").onclick=function(){
+			var r=255;
+			var b=0;
+			var h=100;
+			var time3=setInterval(function(){
+				r-=5;
+				b+=5;
+				h+=2;
+				if(r<=0){
+					clearInterval(time3);
+				}
+				my$("dv").style.backgroundColor="rgb("+r+",100,"+b+")";
+				my$("dv").style.height=h+"px";
+			},100);
+		};
+	</script>
+</body>
+</html>

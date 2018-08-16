@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>￥JavaScript变色￥</title>
+</head>
+<body>
+	<input type="button" value="隔行变色"  id="but" />
+	<ul>
+		<li>苹果</li>
+		<li>橘子</li>
+		<li>苹果</li>
+		<li>橘子</li>
+		<li>苹果</li>
+		<li>橘子</li>
+		<li>苹果</li>
+		<li>橘子</li>
+		<li>苹果</li>
+		<li>橘子</li>
+	</ul>
+	<script src="inid.js"></script>
+	<script>
+		my$("but").onclick=function(){
+			var list=document.getElementsByTagName("li");
+			for(var i=0;i<list.length;i++){
+				if(i%2==0){
+					list[i].style.backgroundColor="yellow";
+				}else{
+					list[i].style.backgroundColor="deepskyblue";
+				}
+			}
+		}
+	</script>
+</body>
+</html>

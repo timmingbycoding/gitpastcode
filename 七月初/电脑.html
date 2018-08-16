@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>电脑</title>
+	<script>
+		/*
+		*调用系统的Object（）来构造对象
+		*/
+		// var computer= new  Object();
+		// computer.col="黄色";
+		// computer.zhong="5kg";
+		// computer.pingBian="联想";
+		// computer.xingHao="Y480";
+		// computer.music=function(){
+		// 	console.log("正在播放青花瓷");
+		// };
+		// computer.movie=function(){
+		// 	console.log("播放电影玉蒲团");
+		// };
+		// computer.game=function(){
+		// 	console.log("在电脑上可以打游戏，地下城与勇士，银熊联盟");
+		// };
+		// computer.codding=function(){
+		// 	console.log("正在敲打js代码，是一个码农");
+		// };
+		// computer.codding();
+
+		/*
+		与Object（）相结合构造与函数的方法构造函数
+		*/
+		// function creatComputer(col,weight,brand,model){
+		// 	var computer=new Object();
+		// 	computer.col=col;
+		// 	computer.weight=weight;
+		// 	computer.brand=brand;
+		// 	computer.model=model;
+		// 	computer.music=function(){
+		// 		console.log("正在播放五月天的歌曲死了多要爱");
+		// 	};
+		// 	computer.movie=function(){
+		// 		console.log("正在播放电影大护法");
+		// 	};
+		// 	computer.code=function(){
+		// 		console.log("正在使用sublime编程programming"+this.model+this.brand+"伤心");
+		// 	};
+		// 	computer.game=function(){
+		// 		console.log("正在使用盖伦打排位");
+		// 	};
+		// 	return computer;    //return必须写，不写没有用。无法访问属性与方法
+		// }
+		// var school=creatComputer("红色red","5千克5kg","联想lenovo","Y480");
+		// school.code();
+		// console.log(school.model);
+		/*
+		使用对象字面量的方法创建对象
+		*/
+		var computer={
+			"color":"red",             //第一个注意点：使用字面量创建对象是要用逗号隔开
+			"weight":"5kg",
+			"brand":"lenovo",
+			"model":"Y480",
+			"music":function(){
+				console.log("正在播放星海");
+			},
+			"movie":function(){
+				console.log("正在播放花木兰，演到花木兰从军");
+			},
+			"game":function(){
+				console.log("正在使用玩玩搬砖打格蓝迪"+this.model);
+			},
+			"code":function(){
+				console.log("正在学习js的三种创建对象的发法下面即将调用一个方法");
+			}
+		};
+		computer.game();
+		for(var key in computer){
+			console.log(key+"================>"+computer[key])
+		}
+		Math.PI;
+		// for(var key in computer){
+		// 	console,log(computer[key]);
+		// }
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

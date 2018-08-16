@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>猫和图片</title>
+	<script>
+		function Pictrue(height,wdith,hit){
+			this.height=height;
+			this.wdith=wdith;
+			this.hit=hit;
+			this.zhanShi=function (){
+			 console.log("这是一张宽："+wdith+"像素，高："+height+"像素，练击："+this.hit);	
+			};
+		}
+		var pig=new Pictrue(15,16,200);
+		 pig.zhanShi();
+		console.log(pig["zhanShi"]()) ;
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

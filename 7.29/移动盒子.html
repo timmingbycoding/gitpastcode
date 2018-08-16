@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动盒子</title>
+	<script src="commen.js"></script>
+	<style>
+		div{
+			background-color: deepskyblue;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			box-shadow: 20px 20px 20px red;
+			position: absolute;
+			left:10px;
+			/*transition: all 3s;*/
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn1" value="移动" />
+	<input type="button" id="btn2" value="移动2" />
+	<div id="dv"></div>
+	<script>
+		// console.log(my$("dv").offsetLeft);
+		function moves(obj,lang){
+			var att=setInterval(function(){
+				var x=my$("dv").offsetLeft;
+				x>lang?x=x-10:x=x+10;
+				obj.style.left=x+"px";
+				if(x>=lang){
+					clearInterval(att);
+				}
+
+			},30)
+			
+		}
+		my$("btn1").onclick=function(){
+			moves(my$("dv"),400);
+		};
+		my$("btn2").onclick=function(){
+			moves(my$("dv"),300);
+		};
+	</script>
+</body>
+</html>

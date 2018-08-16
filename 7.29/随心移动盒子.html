@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随心移动盒子</title>
+	<script src="commen.js"></script>
+	<style>
+		div{
+			width: 100px;
+			height: 50px;
+			position: absolute;
+			left:0px;
+			margin-left: 10px;
+			background-color: red;
+			border: 0;
+			box-shadow: 2px 2px 3px black;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn1" value="按钮1" />
+	<input type="button" id="btn2" value="按钮2" />
+	<div id="dv"></div>
+	<script>
+		my$("btn1").onclick=function(){
+			moveto(my$("dv"),400);
+		}
+		my$("btn2").onclick=function(){
+			moveto(my$("dv"),800);
+		}
+		function moveto(element,tagx){
+			var x=element.offsetLeft;
+			var step=5;
+			
+			var times=setInterval(function(){
+				var y=element.offsetLeft;
+
+				y=y>tagx?y-step:y+step;
+				element.style.left=y+"px";
+				if(Math.abs(tagx-y)<=Math.abs(step)){
+					clearInterval(times);
+				}
+			},10)
+		}
+		
+		
+	</script>
+</body>
+</html>

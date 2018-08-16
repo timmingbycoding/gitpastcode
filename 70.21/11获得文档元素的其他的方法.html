@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>另两个方法</title>
+	<style>
+		.cls{
+			background: pink;
+		}
+		div{
+			height: 100px;
+			width: 100px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="改变" id="btn" />
+	<div class="cls"> 这是一个div</div>
+	<div>只是另一个div</div>
+	<h1 class="cls">这是一个标签</h1>
+	<h1> 这是一个标题</h1>
+	<h1 id="ah"> 这是另一个标题</h1>
+	<span class="cls"> 这是一个span 算盘</span>
+	<script src="inid.js">这是令一个 span审判</script>
+	<script>
+		var bb=document.querySelector("#btn");
+		bb.onclick=function(){
+			var cc=document.querySelectorAll(".cls");
+			for(var i in cc){
+				cc[i].style.backgroundColor="deepskyblue";
+			}
+		};
+	</script>
+</body>
+</html>

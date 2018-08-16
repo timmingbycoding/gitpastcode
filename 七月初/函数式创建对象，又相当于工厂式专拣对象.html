@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义函数式构造对象</title>
+	<script>
+		/**
+			自定义函数法创建对象，不需要return；
+			工产式创建对象，需要return而且需要引用系统的Object（）函数；
+
+
+
+
+		*/
+		function Person(name,age){
+			this.name=name;
+			this.age=age;
+			this.sayHi=function(){
+				console.log("大家好我叫"+this.name+",今年："+this.age+"岁！");
+			};
+		}
+		var fangXiang=new Person("方翔",26);
+		fangXiang.sayHi();
+		console.log(fangXiang instanceof Person);
+		console.log(fangXiang instanceof Object);
+		
+	</script>
+</head>
+<body>
+	自定义行数，撞见对象
+</body>
+</html>

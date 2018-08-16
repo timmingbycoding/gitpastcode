@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>再来一次一定要搞定！</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.ss{
+			width: 400px;
+			height: 500px;
+			background: #0f0;
+			margin: 100px auto;		
+		}
+		.hb:before,.hb:after{
+			content:"";
+			display:table;
+		}
+		.hb:after{
+			clear:both;
+		}
+		.hb span{
+			width: 100px;
+			height: 50px;
+			background: pink;
+			float: left;
+			display: block;
+		}
+		.bb div{
+			width: 400px;
+			height: 450px;
+			display: none;
+			background: deepskyblue;
+		}
+		.hb span.cls{
+			/*display: block;*/
+			background: deepskyblue;
+		}
+		.bb div.cls{
+			display:block;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="ss">
+		<div class="hb">
+			<span class="cls">数学</span>
+			<span>英语</span>
+			<span>语文</span>
+			<span>另可</span>
+		</div>
+		<div class="bb">
+			<div class="cls">数学世界</div>
+			<div>语文大事记</div>
+			<div>应以学习叫</div>
+			<div>令打小孩</div>
+		</div>
+	</div>	
+	<script>
+		//获得目标集
+		var up=document.getElementsByTagName("span");
+		var down=document.getElementsByClassName("bb")[0].getElementsByTagName("div");
+		// console.log(up);
+		// console.log(down);
+		for(var i=0;i<up.length;i++){
+			up[i].setAttribute("intext",i);
+			up[i].onclick=function(){
+				for(var j=0;j<up.length;j++){
+					up[j].removeAttribute("class");
+				}
+				this.className="cls";
+				var sum=this.getAttribute("intext");
+				// console.log(sum);
+				for(var k=0;k<down.length;k++){
+					down[k].removeAttribute("class");
+				}
+				down[sum].className="cls";
+			}
+		}
+	</script>
+</body>
+</html>

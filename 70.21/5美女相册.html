@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>美女相册</title>
+	<style>
+		a img{
+			/*width: 80px;*/
+			height: 100px;
+		}
+		div{
+			height: 300px;
+		}
+		div img{
+			height: 300px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>海贼王相册</h1>
+	<a href="img/路飞.jpg"><img src="img/路飞.jpg" alt="路飞"></a>
+	<a href="img/索隆.jpg"><img src="img/索隆.jpg" alt="索隆"></a>
+	<a href="img/乌索普.jpg"><img src="img/乌索普.jpg" alt="乌索普"></a>
+	<a href="img/娜美.jpg"><img src="img/娜美.jpg" alt="娜美"></a>
+	<a href="img/山治.jpg"><img src="img/山治.jpg" alt="山治"></a>
+	<a href="img/罗宾.jpg"><img src="img/罗宾.jpg" alt="罗宾"></a>
+	<a href="img/乔巴.jpg"><img src="img/乔巴.jpg" alt="乔巴"></a>
+	<div>
+		<img src="img/l.jpg" alt="jiangxi" id="sd" />
+	</div>
+	<h4 id="bbt">图片名</h4>
+	<!-- <a href="img/"><img src="" alt=""></a> -->
+	<script>
+		var alist=document.getElementsByTagName("a");
+		for(var key in alist){
+			alist[key].onclick=function(){
+				document.getElementById('sd').src=this.href;
+				document.getElementById("bbt").innerText=this.getElementsByTagName("img")[0].alt;
+				return false;
+			}
+		}
+		document.getElementById("img").onmou
+	</script>
+</body>
+</html>

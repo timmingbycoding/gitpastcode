@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变色的盒子</title>
+	<script src="commen.js"></script>
+	<style>
+		div{
+			width: 400px;
+			height: 400px;
+			margin: 150px auto;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" id="btn1" value="变色1" />
+	<div id="dv"></div>
+	<input type="button" id="btn" value="变色2" />
+	<script>
+		function fun(){
+				var r=parseInt(Math.random()*256);
+				var g=parseInt(Math.random()*256);
+				var b=parseInt(Math.random()*256);
+				my$("dv").style.backgroundColor="rgb("+r+","+g+","+b+")";
+		}
+		my$("btn1").onclick=function (){
+			var clock=setInterval(fun,500);
+		};
+
+		my$("btn").onclick=function (){
+			var r=255;
+			var clock=setInterval(function(){
+				
+				r=r-3;
+				my$("dv").style.backgroundColor="rgb("+r+",0,0)";
+				if(r<0){
+					r=255;
+				}
+			},100);
+		};
+	</script>
+</body>
+</html>

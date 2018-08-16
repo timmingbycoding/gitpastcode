@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组</title>
+	<style>
+		body{
+			background: deepskyblue;
+		}
+	</style>
+	<script>
+		var a="agoodday";                             
+		var b= new String("a helloWorld!");
+		var c=[];
+		var d=[1,2,3,54]
+
+		// console.log(Array.isArray(a));        //false
+		// console.log(Array.isArray(b));        //false
+		// console.log(Array.isArray(c));        //true
+		// console.log(Array.isArray(d));        //true
+		// console.log(a.length);
+		// console.log(Array.from(d,x=>x+x));    //output:[2,4,6,108]
+		// console.log(d.concat(a,"shang"));     //output:[1, 2, 3, 54, "agoodday", "shang"]
+		// //every是非常特殊的，是一个实例方法但是，调用函数，不需要加括号
+		// function isBig(a){
+		//     return a>50;
+		// }
+		// function toSxe(b){
+		//     return b<80;
+		// }
+		function add(c){
+		    return c+=10;
+		  arguments[i]=c;
+		}
+		// console.log(d.every(isBig));
+  //       console.log(d.every(toSxe));
+        console.log(d.filter(add));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

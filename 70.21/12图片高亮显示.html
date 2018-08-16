@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片有框</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			transition: .52s all;
+		}
+		.show{
+			height: 400px;
+		}
+		.show img{
+			height: 400px;
+		}
+		.imbar img{
+			height: 100px;
+			border:3px solid rgba(0,0,0,.01);
+		}
+		.imbar li{
+			list-style-type: none;
+			float: left;
+			margin-left: 5px;
+			cursor: pointer;
+			overflow:hidden;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>美女相册</h1>
+	<div class="show">
+		<img src="" alt="" id="tagg">
+	</div>
+	<div class="imbar">
+		<ul>
+			<li><img src="img/a.jpg" alt="美女1"  /></li>
+			<li><img src="img/b.jpg" alt="美女2"  /></li>
+			<li><img src="img/c.jpg" alt="美女3"  /></li>
+			<li><img src="img/d.jpg" alt="美女4"  /></li>
+			<li><img src="img/e.jpg" alt="美女5"  /></li>
+			<li><img src="img/f.jpg" alt="美女6"  /></li>
+			<li><img src="img/g.jpg" alt="美女7"  /></li>
+			<li><img src="img/h.jpg" alt="美女8"  /></li>
+			<li><img src="img/i.jpg" alt="美女9"  /></li>
+			<li><img src="img/j.jpg" alt="美女10"  /></li>
+		</ul>
+		
+
+	</div>
+	<script src="inid.js"></script>
+	<script>
+		function myc$(classname){
+			return document.getElementsByClassName(classname)[0];
+		}
+		var imb=myc$("imbar").getElementsByTagName("img");
+		console.log(imb);
+		for(var i in imb){
+			imb[i].onmouseover=function(){
+				my$("tagg").src=this.src;
+				this.style.border="3px solid red";
+			};
+			imb[i].onmouseleave=function(){
+				// my$("tagg").src=this.src;
+				this.style.border="";
+			};
+		}
+	</script>
+</body>
+</html>

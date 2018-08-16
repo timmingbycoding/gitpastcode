@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>not伪类选择器</title>
+	<style>
+		p{
+			height: 20px;
+		}
+		p{
+			background: gray;
+		}
+		p[class='bb'] ~p{
+			background: red;
+		}
+		p:not([class$='c']){
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+<!-- 	<div class="page">
+		<p class="cca"></p>
+		<p class="ccb"></p>
+		<p class="ccc"></p>
+		<p class="ccd"></p>
+		<p class="cce"></p>
+		<p class="bb"></p>
+		<p class="ccg"></p>
+		<p class="cch"></p>
+		<p class="cci"></p>
+		<p class="ccj"></p>
+		<input type="time" />
+		<input type="month" />
+		<input type="week" />
+		<input type="date" />
+		<input type="datetime-local" />
+		<input type="number" />
+		<input type="range" min='0' max='100' step='20' />
+		<input type="url" />
+		 -->
+		<form action="www.baidu.com">
+			<input type="text" enable />
+			<input type="text" disable / >
+
+		</form>
+		
+	</div>
+</body>
+</html>

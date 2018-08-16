@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获得颜色</title>
+	<style>
+		.dv{
+			width: 100px;
+			height: 100px;
+			background: #ccc;
+		}
+	</style>
+	<script>
+		
+	</script>
+	<script>
+		function getColor(){
+			var col="#";
+			var arr=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+			for(var i=0;i<6;i++){
+				var b=parseInt(Math.random()*16);
+				col+=arr[b]
+			}
+			return col;
+		}
+		console.log(getColor());
+	</script>
+</head>
+<body>
+	<div class="dv"></div>
+</body>
+</html>

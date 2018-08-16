@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$$javascript</title>
+	<script src="commen.js"></script>
+</head>
+<body>
+	<input type="button" value="按钮"  id="btn"/>
+	<input type="button" value="按钮"  id="btn1"/>
+	<script>
+		var i=0;
+		function fi(){
+			console.log("我的天"+i);
+			i++;
+		}
+		
+		my$("btn").onclick=function(){
+			var stt=setTimeout(fi,2000);			
+			//将定时器写在行数里面不利于调用 
+			my$("btn1").onclick=function(){
+				clearTimeout(stt);
+				console.log("结束了");
+			};
+		};
+		
+	</script>	
+</body>
+</html>

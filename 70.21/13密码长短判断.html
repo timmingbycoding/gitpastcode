@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$密码长短判断$</title>
+</head>
+<body>
+	<input type="password"  id="sp">
+	<script src="inid.js"></script>
+	<script>
+		my$("sp").onblur=function(){
+			if(this.value.length>=6&&this.value.length<=10){
+				this.style.backgroundColor="gray";
+			}else{
+				this.style.backgroundColor="deepskyblue";
+			}
+		}
+	</script>
+</body>
+</html>

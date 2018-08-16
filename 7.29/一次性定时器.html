@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+	<script src="commen.js"></script>
+	<script>
+		//window.onload(){
+			var timeI=setTimeout(function(){
+				alert("你好");
+			},2000)
+			
+		//}
+	</script>
+</head>
+<body>
+	<input type="button" id="btn" value="你好" />
+	<script>
+		my$("btn").onclick=function (){
+				clearTimeout(timeI);
+			};
+	</script>
+</body>
+</html>

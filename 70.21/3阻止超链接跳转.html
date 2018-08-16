@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$JavaScript是容易学的$</title>
+</head>
+<body>
+	<input type="button" value="阻止" id="but" />
+	<a href="http://f8dy.tv" id="alink"> 电影网</a>
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+		my$("alink").onclick=function (){
+			console.log("我不跳了");
+			return false;
+		}
+	</script>
+</body>
+</html>

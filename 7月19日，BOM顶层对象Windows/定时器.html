@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>周二是咋了</title>
+	<script>
+		// 创建一个定时器，1000毫秒后执行，返回定时器的标示
+		// var timerId = setTimeout(function () {
+		//   console.log('Hello World');
+		// }, 1000);
+
+		// // 取消定时器的执行
+		// clearTimeout(timerId);
+		// var fang =setTimeout(function(){
+			// alert("你在等死吗！");
+		// },3000);
+		// clearTimeout(fang);
+
+		//计时器会干扰标题的显示
+		var i=0;
+		var a=4000;
+		var show=setInterval(function(){
+			document.write("你好，我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗我3秒粗线一次！");
+			console.log("出现简阳"+i);
+			i++;
+			a*=i;
+		},1000); //这个a值只有第一个有用 写了算法不做数，会变成默认值  
+		var cshow=setTimeout(function(){
+			document.write("我来终止这场闹剧！！！");
+			clearInterval(show);
+		},3000);
+	</script>
+</head>
+<body>
+	我是内容
+</body>
+</html>

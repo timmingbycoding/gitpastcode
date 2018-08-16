@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$javascript is easy to learn !$</title>
+	<style>
+		input{
+			color: gray;
+		}
+	</style>
+</head>
+<body>
+	<input type="text"  value="请输入内容" id="tet" />
+	<script src="inid.js"></script>
+	<script>
+		my$("tet").onfocus=function(){
+			console.log("hahah");
+			if(this.value=="请输入内容"){
+				this.value=" ";
+				this.style.color="#000";
+			}
+		};
+		my$("tet").onblur=function(){
+			console.log("cahhca");
+			if(this.value.length==0){
+				this.value="请输入内容";
+				this.style.color="gray";
+			}
+		}
+	</script>
+</body>
+</html>

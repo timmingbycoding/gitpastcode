@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封装定时器</title>
+	<script src="commen.js"></script>
+	<style>
+		#dv{
+			height: 100px;
+			width: 200px;
+			background-color: yellow;
+			position: absolute;
+			margin-top: 30px;
+			left:20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="dv"></div>
+	<input type="button" value="移动到位置1" id="btn1" />
+	<input type="button" value="移动到位置2" id="btn2" />
+	<script>
+		my$("btn2").onclick=function (){
+			standardMove(my$("dv"),800);
+		};
+		my$("btn1").onclick=function (){
+			standardMove(my$("dv"),400);
+		};
+	</script>
+</body>
+</html>

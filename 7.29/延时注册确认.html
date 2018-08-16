@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>延时注册</title>
+	<script src="commen.js"></script>
+	<style>
+		input{
+
+		}
+	</style>
+</head>
+<body>
+	<textarea name="haha" id="aeas" cols="30" rows="10">
+		你咋们对要等到我把行李，不服来皇城砍我！！
+	</textarea>
+	<input type="button" id="btn" value="请仔细阅读(5s)" disabled=true />
+	<script>
+		var time=5;
+		var time2=setInterval(function(){
+			time--;
+			my$("btn").value="请仔细阅读（"+time+"s）";
+			if(time==0){
+				clearInterval(time2);
+				my$("btn").disabled=false;
+				my$("btn").value="确认";
+			}
+		},1000)
+	</script>
+</body>
+</html>

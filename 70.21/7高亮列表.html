@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高亮列表</title>
+	<style>
+		li{
+			list-style: none;
+			transition: .5s all;
+			cursor: pointer;
+		}
+		/*li:hover{
+			background: deepskyblue;
+		}*/
+	</style>
+</head>
+<body>
+	<ul>
+		<li>苹果</li>
+		<li>苹果</li>
+		<li>苹果</li>
+		<li>苹果</li>
+		<li>苹果</li>
+		<li>苹果</li>
+		<li>苹果</li>
+		<li>苹果</li>
+	</ul>
+	<script src="inid.js"></script>
+	<script>
+		var list=document.getElementsByTagName("li");
+		for(var key in list){
+			list[key].onmouseover=function(){
+				this.style.backgroundColor="yellow";
+			};
+			list[key].onmouseleave=function(){
+				this.style.backgroundColor="";
+			};
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>改变文本框的value属性</title>
+</head>
+<body>
+	<input type="button" value="改变" id="but"><br />
+	<input type="text" name="name1" value="你好，小翔子" /><br />
+	<input type="text" name="name2" value="你好，小翔子" /><br />
+	<input type="text" name="name1" value="你好，小翔子" /><br />
+	<input type="text" name="name3" value="你好，小翔子" /><br />
+	<input type="text" name="name1" value="你好，小翔子" /><br />
+	<input type="text" name="name4" value="你好，小翔子" /><br />
+	<input type="text" name="name1" value="你好，小翔子" /><br />
+	<input type="text" name="name5" value="你好，小翔子" /><br />
+	<input type="text" name="name1" value="你好，小翔子" /><br />
+	<input type="text" name="name6" value="你好，小翔子" /><br />
+	<script src="inid.js"></script>
+	<script>
+		my$("but").onclick=function(){
+			var list=document.getElementsByName("name1");
+			for(var key in list){
+				list[key].value="welcome to amny";
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$方腾最睿智$</title>
+</head>
+<body>
+	<a href="img/l.jpg" id="alink"><img src="img/l-min.jpg" id="im" alt="你说我漂亮吗！"></a>
+	<!-- <img src="img/l-min.jpg" id="im" alt="你说我漂亮吗！" /> -->
+	<script>
+		function my$(id){
+			return document.getElementById(id);
+		}
+		my$("alink").onclick=function(){
+			my$("im").src=this.href;
+			return false;
+		}
+		// my$("im").onclick=function(){
+		// 	if(this.src=="img/l-min.jpg"){
+		// 		this.src="img/l.jpg";
+		// 	}else if(this.src=="img/l.jpg"){
+		// 		this.src="img/l-min.jpg";
+		// 	}
+		// }
+	</script>
+</body>
+</html>

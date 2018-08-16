@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>车子car</title>
+	<script>
+		/*
+		*第一种方法使用系统的Object（）构造对象
+		*
+		*
+		*/
+		// var car=new Object();
+		// car.weight="5ton";
+		// car.corlor="yellow";
+		// car.brand="东风日产";
+		// car.manned=function(){
+		// 	console.log("我可以拉人");
+		// };
+		// car.cargo=function(){
+		// 	console.log("我可以载货"+this.brand);
+		// };
+		// car.cargo();
+		/*
+		*第二种
+		*使用Object（）构造函数创建对象，一定要有return，不然方法属性无法访问与调用
+		*不可使用this关键字，
+		*/
+		// function creatCar(weight,brand,corlor){
+		// 	var car =new Object();
+		// 	car.weight=weight;
+		// 	car.brand=brand;
+		// 	car.corlor=corlor;
+		// 	car.manned=function(){
+		// 		console.log("我可以载人100人");
+		// 	};
+		// 	car.cargo=function(){
+		// 		console.log("我可载货100吨");
+		// 	};
+
+		// 	return car;                                  //return 要写在最后
+			
+		// }
+		// var cara=creatCar("15kg","东风日产","yellow");
+		// console.log(cara.corlor);
+		// cara.cargo();
+
+
+
+		/*
+		*第三种方法
+		*使用对象只，面凉创建方法
+		*/
+		// var car={
+		// 	"weight":"5t",
+		// 	"corlor":"blue",
+		// 	"brand":"东风日产",
+		// 	"manned":function(){
+		// 		console.log("东风日产可拉5000人");
+		// 	},
+		// 	"cargo":function(){
+		// 		console.log("东风时代可载货500t");
+		// 	}
+		// }
+		// console.log(car.corlor);
+		// car.manned();      //paused on exception:'typeError:car.maned is not a function'.
+		function Car(corlor,weight,brand,model){
+			this.corlor=corlor;
+			this.brand=brand;
+			this.weight=weight;
+			this.model=model;
+			this.manned=function(){
+				console.log("我是"+this.brand+"的"+this.model+"重"+this.weight+"吨")
+			};
+		}
+		var car=new Car("gray",5000,"德国大众","c2018");
+		console.log(car.model);
+		car.manned();
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$JavaScript是好学的$</title>
+	<style>
+		ul li{
+			cursor:pointer;
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<ul id="uu">
+			<li >数学成绩</li>
+			<li >数学成绩</li>
+			<li >数学成绩</li>
+			<li >数学成绩</li>
+		</ul>	
+	<script src="inid.js"></script>
+	<script>
+		var list=my$("uu").getElementsByTagName("li");
+		// console.log(list);
+		for(var i=0;i<list.length;i++){                    //使用for in 会出问题系统会报错。
+			// var a=i*10;
+			// list[i].inneText=a;
+			list[i].setAttribute("score",(i+1)*10);	
+			list[i].onclick=function(){
+				alert(this.getAttribute("score"));
+			};
+		};
+		// for(var j in list){
+		// 	// var a=i*10;
+		// 	// list[i].inneText=a;
+		// 	list[i].onclick=function(){
+		// 		alert(list[i].getAttribute("score"));
+		// 	};
+		// 	// list[i].getAttribute("score",i*10);	
+		// };
+	</script>
+</body>
+</html>

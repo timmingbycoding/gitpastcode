@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>更改</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+		}
+		.cls{
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="改变颜色" id="btn" />
+	<h1 class="cls">
+		这是一个标题
+	</h1>
+	<h1>
+		这是另一个标题
+	</h1>
+	<h1>
+		这是最后一个标题
+	</h1>
+	<div class="cls">这是一个div</div>
+	<div>这是另一个div标签</div>
+	<span class="cls"></span><br />
+	<span></span><br />
+	<p>这是一个p标签</p>
+	<p class="cls"> 这是另一个p标签</p>
+	<script src="inid.js"></script>
+	<script>
+		my$("btn").onclick=function(){
+			var list=document.getElementsByClassName("cls");
+			console.log(list);
+			for(var i in list){
+				list[i].style.backgroundColor="deepskyblue";
+			}
+		}
+	</script>
+</body>
+</html>
