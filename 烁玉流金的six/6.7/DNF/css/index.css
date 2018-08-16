@@ -1,0 +1,199 @@
+body{
+	
+}	
+.ost_box{
+	height: 40px;
+	background: #fff;
+	border: 1px solid #c9c9c9;
+}
+
+.ost_inner{
+	width: 1060px;
+	/*height: 432px;*/
+	position: relative;
+	margin: 0 auto;
+}
+.dfd_frist{
+	height: 432px !important;
+}
+.ost_innner:before,.ost_inner:after{
+	display: table;
+	content: "";
+}
+.ost_inner:after{
+	clear: both;
+}
+.ost_frist {
+	overflow: hidden;
+	display: inline-block;
+	padding-right: 15px;
+	width: 205px;
+	height: 40px;
+	background: url(../img/sprite0.png) no-repeat 0 -40px;
+	text-indent: -10000px;
+}
+
+
+li.texta{
+	height: 40px;
+	line-height: 40px;
+}
+.texta a{
+	display: block;
+	font-size: 12px;
+	font-weight: 400;
+	float: left;
+	color: #464646;
+}
+.texta{
+	background: url(../img/ost_cc.png) no-repeat 0 50%;
+	padding-left: 20px;
+}
+.texta a:hover{
+	color: #ff4e00;
+}
+.ost_a{
+	margin-right: 20px;
+}
+.ost_b span{
+	margin-left: 4px;
+	float: right;
+	margin-top: 15px;
+	display: block;
+	width: 11px;
+	height: 11px;
+	background:url(../img/sprite0.png) no-repeat -150px -134px;
+}
+.ost_b:hover > span{
+	background-position: -170px -134px;
+}
+.dnf_body{
+	min-height: 860px;
+	background: url(../img/dnf_bg0.jpg) no-repeat scroll center 0;
+}
+/*DNF的主体开始*/
+.dnf_main{
+	width: 1060px;
+	margin: 0 auto;
+	/*background: rgba(0,0,0,.2);*/
+}
+.main_left:after{
+	content: "";
+	display: block;
+	height: 0px;
+	visibility: hidden;
+	clear: both;
+}
+.logo{
+	width: 190px;
+	height: 135px;
+	/*background: rgba(217,68,131,.5);*/
+	margin-left: -500px;
+}
+.logo,.nav_top{
+	float: left;
+}
+.logo a{
+	display: block;
+	width: 190px;
+	height: 135px;
+	cursor: pointer;
+	text-indent: -888px;
+	box-shadow:
+		1px 2px 3px 4px rgba(255,1,1,.2) inset,
+		1px 2px 3px 4px rgba(1,255,1,.2),
+		1px 2px 3px 4px rgba(255,1,255,.2)
+		;
+}
+.nav_top {
+	margin-left: -250px;
+}
+.nav_top{
+	padding-top: 42px;
+}
+.nav_top a{
+	font-size: 12px;
+	text-align: center;
+}
+.nav_top ul{
+	width: 828px;
+	height: 15px;
+}
+.nav_top  li{
+	float: left;
+	height: 20px;
+	width: 60px;
+	font-size: 12px
+	text-indent: -199px ;
+	overflow: hidden;
+	cursor: pointer;
+}
+.nav_top .nav_top_select li{
+	text-indent: 0;
+}
+.nav_top_select a{
+	color: #fff;
+}
+.nav_top_select a:hover{
+	color: #ec4828;
+}
+.item_a1, .item_a2,.item_a5, .item_a6,.item_a7{
+	margin-right: 64px;
+}
+.item_a3, .item_a4{
+	margin-right: 42px;
+}
+
+.nav_top ul a:hover{
+	color: #f10125;
+}
+.nav_top_select{
+	margin-top: 26px;
+	width: 828px;
+	min-height: 130px;
+	/*background: rgba(99,254,14,.3);*/
+}
+.nav_top_select ul{
+	width: 116px;
+	height: 108px;
+	/*border: 1px solid pink;*/
+	float: left;
+}
+.nav_main{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -184px;
+	width: 369px;
+	height: 141px;
+	/*background: rgba(255,255,255,.1);*/
+}
+.nav_main a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-indent: -19999px;
+	cursor: pointer;
+}
+.main_nav{
+	min-height: 50px;
+	background: rgba(0,255,0,.3);
+}
+.main_left{
+	width: 200px;
+	min-height: 300px;
+	background: rgba(255,255,0,.3);
+}
+.main_right{
+	width: 860px;
+	min-height: 800px;
+	background: rgba(0,255,255,.2);
+}
+/*DNF的主体结束*/
+
+/*dnf的页脚开始*/
+.dnf_footer{
+	min-height: 100px;
+	background: rgba(0,0,255,.2);
+}
+/*dnf的页脚结束*/

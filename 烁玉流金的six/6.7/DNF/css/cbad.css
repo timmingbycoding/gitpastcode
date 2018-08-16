@@ -1,0 +1,33 @@
+.father{
+	width: 998px;
+	background: pink;
+	/*overflow: auto;*/
+}
+/*.father:after{
+	content:"";
+	height: 0px;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}*/
+.father:before,.father:after{
+	content: "";
+	display:table;
+}
+.father:after{
+	clear: both;
+}
+.father{
+	*zoom:1;
+}
+.son1{
+	background: #780012 url(../img/ost_cc.png) no-repeat 0 50%;
+	width: 80px;
+	height: 80px;
+	
+}
+.son2{
+	width: 100px;
+	height: 100px;
+	background: blue;
+}

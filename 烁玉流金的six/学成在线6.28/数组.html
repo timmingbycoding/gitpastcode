@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组</title>
+</head>
+<body>
+	<script>
+		var number=Number(prompt("请输入学生数量"));
+		console.log("我们班有"+number+"人！");
+		var scroe=new Array();
+		var lv=0;
+		var max=0;
+		for(var i=0;i<number;i++){
+			
+			scroe[i]=Number(prompt("请输入序号为"+i+"的分数"));
+			console.log(i+"号学生分数为："+scroe[i]);
+			lv+=scroe[i];
+			max=max>scroe[i]? max:scroe[i];
+			console.log(max);
+		}
+		lv=lv/number;
+		console.log(scroe[5]+2);
+		console.log(lv);
+	</script>
+</body>
+</html>

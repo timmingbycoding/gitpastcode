@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习</title>
+</head>
+<body>
+	<script>
+		// console.log("hello world!");
+		// var a=Number(prompt("Plase enter a number:"));
+		// console.log("We have "+a+" classmate! ");
+		// var b=new Array();
+		// var min=b[0];
+		// var max=b[0];
+		// for(var i=0;i<a;i++){
+		// 	b[i]=Number(prompt("please eneter a score of "+i+" classmate"));
+		// 	min=min<b[i]?min:b[i];
+		// 	max=max>b[i]?max:b[i];
+		// }
+		// console.log(max+"|"+min);
+		// var sum=0;
+		// var avg=0;
+		// for(var i=0;i<b.length;i++){
+		// 	sum+=b[i];	
+		// }
+		// avg=sum/b.length;
+		// console.log(sum);
+		// console.log(avg);
+
+		// var a=new Array();
+		// a=[1,2,3,4,5,6,7,9]
+		// console.log(a.length);
+		// for(var i=0;i<a.length/2;i++){
+		// 	var temp=a[i];
+		// 	a[i]=a[a.length-1-i];
+		// 	a[a.length-1-i]=temp;	
+		// }
+		// console.log(a);
+
+		var a=[32,25,46,89,95,61,18,12];
+		for(var i=0;i<a.length;i++){
+			for(var j=i;j<a.length;j++){
+				if(a[j]>a[i]){
+					var temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+		}
+		console.log(a);	
+	</script>
+</body>
+</html>

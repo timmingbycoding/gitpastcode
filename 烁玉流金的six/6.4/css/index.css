@@ -1,0 +1,82 @@
+body{
+	font-size: 14px;	
+}
+.nav{
+	background:url(../img/head.png) no-repeat center;
+	height: 500px;
+}
+
+.contenter{
+	width: 1190px;
+	margin: 0 auto;
+}
+/*左边开始*/
+.nav_left{
+	width: 190px;
+	height: 480px;
+	background:#fefefe;
+	margin-right: 10px;
+}
+.nav_left ul{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.nav_left li{
+	height: 27px;
+	line-height: 27px;
+	padding-left: 18px;
+}
+.nav_left a{
+	font: 14px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,\\5B8B\4F53,sans-serif;
+	/*font-size: 14px;*/
+	color: #626262;
+}
+.nav_left a:hover{
+	color: #f10125;
+}
+.nav_middle{
+	margin-top: 10px;
+	width: 790px;
+	height: 480px;
+	
+	margin-right: 10px;
+}
+.large{
+	position: relative;
+}
+.large button{
+	position: absolute;
+	background: rgba(0,0,0,.1);
+	height: 35px;
+	width: 20px;
+	border:0;
+}
+button i{
+	color: #999;
+}
+button:hover{
+	background: rgba(0,0,0,.3);
+}
+.bleft{
+	left: 0;
+	top: 50%;
+}
+.bright{
+	right: 0;
+	top: 50%;
+}
+.small{
+	width: 190px;
+	height: 480px;
+}
+.small img{
+	margin-bottom: 10px;
+}
+.nav_right{
+	width: 190px;
+	height: 480px;
+	background: #00f;
+}
+
+/*左边结束*/

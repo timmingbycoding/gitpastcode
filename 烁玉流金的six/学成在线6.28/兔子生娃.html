@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>兔子生娃</title>
+</head>
+<body>
+	<script>	
+		var mouth=1;
+		var sum=1;
+		var newa=1;
+		var yong=0;
+		var old=0;
+			
+		for(var i=0;i<12;i++){
+			sum+=old;
+			old+=yong;
+			yong=newa;
+			newa=old;
+			console.log("能生的兔子有："+old+"，还有一年能生的有："+yong+"，新生兔子有："+newa+"只。"+sum);
+		}
+		console.log(sum);
+	</script>
+</body>
+</html>
