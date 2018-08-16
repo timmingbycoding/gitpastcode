@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绑定事件</title>
+	<!-- <script src="commen.js"></script> -->
+		<script>
+		/*
+		*绑定事件的三种方法
+		*1、绑定事件的区别
+		*2移除绑定花事件的方法和区别和兼容代码；
+		*3、时间的三个阶段
+		*目标阶段，冒泡阶段，
+		*4事件冒泡
+		*5为同一事件绑定不同事件指向同一处理函数
+		*mouseover，mouseout
+		*6百度大项目
+		*7、BOM
+		*8、定时器
+		*createTime
+		*9DOM加强
+		*
+		*
+		*
+		*addEventListener与attachEvent的区别
+		*名字不一样一个 叫addEventListener一个叫attachEvent
+		*事件类型不一样一个有on，一个没on，没on是Firefox的标准一个是IE的标准
+		*this的指向不一样，addEventLIstener指向的是当前对像，二attachEvent指向的是Windows
+		*addEventListener是谷歌火狐支持的
+		*attachEvent是IE谷歌支持的
+		*
+		*
+		*
+		*
+		*事件绑定与事件解除用的方法一致
+		*element.onclick=fn;-------element.onclick=null;
+		*element.addEventListener=("click",fn,false)----------------element.removeEventListener("click",fn,false);
+		*element.attachEvent("click",fn);--------element.detachEvent("click",fn)
+		*解铃还须系铃人
+		*
+		*
+		*
+		*
+		*
+		*
+		*
+		*
+		*
+		*
+		*
+		*
+		*
+		*/
+		function my$(id){
+	return document.getElementById(id);
+}
+	</script>
+</head>
+<body>
+	<input type="button" name="按钮1" value="按钮1" id="btn1"/>
+	<input type="button" name="按钮2" value="按钮2" id="btn2"/>
+	<script>
+		// my$("btn1").onclick=function (){
+		// 	console.log("方翔啊，起来讲课了");
+		// };
+		// my$("btn2").onclick=function (){
+		// 	my$("btn1").onclick=null;
+		// };
+		var i=0;
+		function fang(){
+			i++;
+			// console.log("fangxiang"+i);
+			alert(i);
+		}
+		// function cfang(){
+		// 	my$("btn1").removeEventListener("click",fang,false);		
+		// }
+		// my$("btn1").addEventListener("click",fang,false);
+		// my$("btn2").addEventListener("click",cfang,false);
+		my$("btn2").attachEvent("onclick",fang);// 不兼容的代码
+		
+	</script>	
+</body>
+</html> 

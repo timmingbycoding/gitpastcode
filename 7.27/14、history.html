@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- history -->
+	<script src="commen.js"></script>
+</head>
+<body>
+	<input type="button" value="跳转" id="btn1" />
+	<input type="button" value="跳转" id="btn2" />
+	<script>
+		
+		my$("btn1").onclick=function(){
+			window.location.href="15、测试页面.html";
+		};
+		my$("btn2").onclick=function(){
+			window.history.forward();
+		};
+	//location 的要理解location的组成
+	// scheme--协议；
+	// host-主机；
+	// port--端口；
+	// query-string--发向服务器的数据 ：
+	// ahchor--锚
+	</script>
+</body>
+</html>

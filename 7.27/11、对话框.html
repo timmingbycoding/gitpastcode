@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对话框</title>
+	<script>
+		// 有三个对话框
+		// alert
+		// prompt
+		// confirm 
+		
+		// 这三个对话框不常用，也是不推荐使用的，想要使用对画框使用js加div的方式构造行的对话框；
+		// 另一个不叫重要的原因是系统提供的这三个方法，不可以修改对话框的样式，这是不好的用户体验；
+		// alert prompt confirm  这三个方法在调试的时候方便使用 ；
+
+	</script>
+</head>
+<body>
+	<script>
+		var resurt=window.confirm("你确定退出ma?")
+		alert(resurt);
+		var a=[];
+		var b=window.prompt("请输入一个字符");
+		while(b!="0"){
+			a.push(b);
+			b=window.prompt("请输入一个字符");
+		}
+		console.log(a);
+	</script>
+</body>
+</html>

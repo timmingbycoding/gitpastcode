@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>航水</title>
+	<script src="commen.js"></script>
+</head>
+<body>
+	<input type="button" value="安娜娜" id="xianfeng" />
+	<script>
+		function fun(e){
+			switch(e.type){
+				case "mouseover":console.log("我拍看见辍笔");break;
+				case "click":console.log("你快走");break;
+				case "mouseout":console.log("不要回来了，吓死宝宝了");break;
+			}
+		}
+		my$("xianfeng").onclick=fun;
+		my$("xianfeng").onmouseover=fun;
+		my$("xianfeng").onmouseout=fun;
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Documenthez</title>
+</head>
+<body id="bd">
+	<script src="commen.js"></script>
+	<script>
+
+		for(var i=0;i<100;i++){
+			var dv=document.createElement("div");
+			var r=parseInt(Math.random()*256);
+			var g=parseInt(Math.random()*256);
+			var b=parseInt(Math.random()*256);
+			
+			dv.style.cssText="background:rgb("+r+","+g+","+b+");width:100px;height:100px;float:left;line-height:100px;text-align:center";
+			dv.innerText="第"+(i+1)+"个盒子";
+			bd.appendChild(dv);
+		}
+		var ddv=document.body.getElementsByTagName("DIV");
+		
+
+		for(var j=0;j<ddv.length;j++){
+			ddv[j].onclick=function(){
+				alert(this.innerText);
+			};
+			
+		}
+
+	</script>
+</body>
+</html>

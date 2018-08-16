@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		#box{
+			width: 450px;
+			margin: 200px auto;
+		}
+		#txt{
+			width: 350px;
+		
+	</style>
+</head>
+<body>
+	
+	<div id="box">
+		<input type="text" id="txt" />
+		<input type="button" value="搜索" id="btn" />
+	</div>
+	<script src="commen.js"></script>
+	<script>
+		var keyWords=["方翔是高材生","方翔热爱生活","胡大宝变捞了","小狗就是UZI","小虎的中单很猛","EDG今天的比赛打得很烂","将大好优势断送","但是不可否认的是","他们小也有冠军潜质"];
+		my$("txt").onkeyup=function (){
+			//一个函数总结所有；
+
+			//每一次键盘抬起都要进行div判断
+			if(my$("dv")){
+				my$("box").removeChild(my$("dv"));
+			}
+
+			//获取文本内容
+			var text=this.value;
+			//创建备用数组
+			var tempArr=[];
+
+			//讲文本框输入内容与数组进行比对
+			for(var i=0;i<keyWords.length;i++){
+				//比对条件是是否是开头出现
+				if(keyWords[i].indexOf(text)!=-1){
+					//将获得的字符串输入进备用数组 
+					tempArr.push(keyWords[i]);
+				}
+			}
+			if(this.value.length==0||tempArr.length==0){
+				if(my$("dv")){
+					my$("box").removeChild(my$("dv"));
+				}	
+				return;//当没有搜索到祥光内容不执行后面的代码；
+			}
+			var dvObj=document.createElement("div");
+			my$("box").appendChild(dvObj);
+			dvObj.style.cssText="width:350px;border:1px solid red;";
+			dvObj.id="dv";
+			//根据备用数组创建标签便加入DV盒子中
+			for(var j=0;j<tempArr.length;j++){
+				var pObj=document.createElement("p");
+				setInnerText(pObj, tempArr[j]);
+				pObj.style.cssText="margin:5px 0px 0px 5px;padding:0px;cursor:pointer";
+
+				my$("dv").appendChild(pObj);
+
+				pObj.onmouseover=function(){
+					this.style.backgroundColor="yellow";
+				};
+				pObj.onmouseout=function(){
+					this.style.backgroundColor="gray";
+				};
+			}
+
+		};
+
+	</script>
+</body>
+</html>

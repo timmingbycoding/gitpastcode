@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>书剑坚挺</title>
+</head>
+<body>
+	<input type="button" id="btn1" value="按钮1" >
+	<input type="button" id="btn2" value="按钮2" >
+	<input type="button" id="btn3" value="按钮3" >
+	<div id="dv">
+		<span>原来存在的span内容</span>
+		<ul id="uu">
+			<li>原来存在的内容</li>
+			<li>原来存在的内容</li>
+			<li id="ali">原来存在的内容</li>
+			<li>原来存在的内容</li>
+			<li>原来存在的内容</li>
+		</ul>
+		<a href="#">原来存在的A标签内容</a>
+	</div>
+	<script src="commen.js"></script>
+	<script>
+		function myAddChild(){
+			var lii=document.createElement("LI");
+			lii.innerHTML="如来佛祖";
+			uu.insertBefore(lii,uu.firstChild);
+		}
+		function f2(){
+			var s=uu.firstElementChild;
+			uu.removeChild(s);
+		}
+		function f3(){
+			removeEventListener(my$("btn1"),"click",myAddChild上);	
+		}
+		addEventListener(my$("btn1"),"click",myAddChild);
+		addEventListener(my$("btn2"),"click",f2);
+		addEventListener(my$("btn3"),"click",f3);
+		
+	</script>
+</body>
+</html>

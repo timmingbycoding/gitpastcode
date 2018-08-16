@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度小搜</title>
+	<style>
+		#box{
+			width: 450px;
+			height: 50px;
+			margin: 100px auto;
+		}
+		#txt{
+			width: 350px;
+			height: 40px;
+			border:0px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="box">
+		<input type="text" id="txt" />
+		<input type="button" value="小方一下" />
+	</div>
+	<script src="commen.js"></script>
+	<script>
+		var kuArr=["方翔","清华高材生","北大高材生","逆天李向阳","称王白果","方世玉","方志敏","李良杰","李闯王","方世玉很强","让子弹飞","花海","英雄有梦","血战上海滩","一方净土","说到李向阳"];
+		
+		
+		my$("txt").onkeyup=function (){
+			var text=my$("txt").value;
+			if(my$("dv")){
+				my$("box").removeChild(my$("dv"));
+				// tempArr.length=0;
+			}
+			//将文本框内容与数组经行对比，将关联内容提昂加到临时数组
+			var tempArr=[];//这一行代码要写在里面，要不写在外面然后里面初始化一次
+			for(var i=0;i<kuArr.length;i++){
+				if(kuArr[i].indexOf(text)==0){
+					tempArr.push(kuArr[i]);
+				}
+			}
+			if(text.length==0||tempArr.length==0){
+				if(my$("dv")){
+					my$("box").removeChild(my$("dv"));
+					// tempArr.length=0;
+				}
+				return;
+			}
+			var dvObj=document.createElement("div");
+			dvObj.id="dv";
+			dvObj.style.cssText="width:350px;border:1px solid red";
+			my$("box").appendChild(dvObj);
+			for(var j=0;j<tempArr.length;j++){
+				var pObj=document.createElement("p");
+				setInnerText(pObj,tempArr[j]);
+				pObj.style.cssText="font-size:18px;text-indent:10px";
+				my$("dv").appendChild(pObj);
+			
+				pObj.onmouseover=function(){
+					this.style.backgroundColor="yellow";
+				};
+				pObj.onmouseout=function(){
+					this.style.backgroundColor="";
+				};
+			}
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- 新的收获，解铃还须系铃人 -->
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="江西1" id="btn1" />
+	<input type="button" value="江西2" id="btn2" />
+	<script>
+		function removeEventListener(element,type,funName){
+			if(element.removeEventListener){
+				element.removeEventListener(type,funName,false);
+			}else if(element.detachEvent){
+				element.detachEvent(type,funName);
+			}else{
+				element["on"+type]=null;
+			}
+		}
+		function my$(id){
+			return document.getElementById(id);
+		}
+	</script>
+	<script>
+		function f1(){
+			alert("饶城子弟兵");
+		}
+		my$("btn1").onclick=f1;
+		// addEventListener(my$("btn1"),"click",f1);
+		my$("btn2").onclick=function(){
+			removeEventListener(my$("btn1"),"click",f1);
+		};//这里出现了错误，这个兼容代码出错了,结论是当使用兼容代码去添加事件只能用兼容代码去解除事件，使用onclick 创建的事件不能使用兼容代码去移除事件；总之是解铃还需系铃人
+	</script>
+</body>
+</html>

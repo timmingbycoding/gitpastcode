@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$$加油</title>
+	<script src="commen.js"></script>
+	<script>
+		/**
+		**
+		*节点
+		*页面中所有内容都是节点（标签，元素，属性为本文字空格换行）；
+		*document文档中的顶级对象document元素通过document来获取的对象叫做document对象
+		*节点 节点有三种（标签、属性、文本）
+		*nodeType的值有三个：1----标签  2-----属性  3----文本
+		*nodeName的值也是三个：大写的字母-----标签
+		*小写的字母-----属性
+		*#text-----代表文本
+		*nodeValue：
+		null-----标签；
+		属性值-----属性；
+		文本内容-----文本；
+		*
+		*元素创建 的三个方法
+		*document.write();
+		*父级对象.innerHTML。
+		*document.createElement("大写标签")；
+		*父级对象.appendChild(子元素对象)
+		*父级对象.inerstBefore(新的对象，参照对象)；
+
+		*父级对象.removeChild(自己对象)；
+		*
+		*
+		*
+		*
+		*
+		*/
+	</script>
+</head>
+<body>
+	<div id="dv">
+		<span>扎二叔span</span>
+		<ul id="uu">
+			<li>李静</li>
+			<li>哪吒</li>
+			<li>五菱</li>
+		</ul>
+		<a href="#">还打</a>
+		<script>
+			// var aa=my$("uu");
+			// console.log(aa.parentNode);
+			// console.log(aa.parentElement);
+			// console.log(aa.childNodes);
+			// console.log(aa.children);
+			// console.log(aa.firstChild);
+			// console.log(aa.firstElementChild);
+			// console.log(aa.lastChild);
+			// console.log(aa.lastElementChild);
+			// console.log(aa.previousSibling);
+			// console.log(aa.previousElementSibling);
+			// console.log(aa.nextSibling);
+			// console.log(aa.nextElementSibling);
+			var ss=document.createElement("LI");
+			ss.innerHTML="江西";
+			// uu.appendChild(ss);
+			uu.insertBefore(ss,uu.firstChild);
+			uu.removeChild(uu.lastElementChild);
+			三种事件的绑定方式
+			1、对象.“on”+type=处理函数;
+			2、对象.addEventListener（type，funName，false）
+			3、对象.attachEvent(on+type,funName);
+		</script>
+	</div>
+</body>
+</html>

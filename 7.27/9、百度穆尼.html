@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟百度搜索</title>
+	<script src="commen.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			transition: all .6s;
+			box-sizing: border-box;
+		}
+		#box{
+			width: 500px;
+			height: 50px;
+			margin: 100px auto;
+		}
+		input[type="text"]{
+			width: 400px;
+			height: 50px;
+			line-height: 50px;
+			border:0;
+			background-color: pink;
+			text-indent: 10px;
+			float: left;
+		}
+		input[type="button"]{
+			width: 100px;
+			height: 50px;
+			float: left;
+		}
+		#dv{
+			width: 400px;
+			height: 200px;
+			text-indent: 10px;
+			border: 1px solid #333;
+		}
+		#dv p:hover{
+			color:#333;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<input type="text" id="tet" placeholder="hahaha"value="黄色" />
+		<input type="button" id="btn" value="你好"/>
+
+	</div>
+	<script>
+		 var keyWords = ["小杨才是最纯洁的", "小杨才是最帅的", "小段是最猥琐的", "小超是最龌龊的", "传智播客是一个培训机构", "传说在传智有个很帅很纯洁的小杨", "苹果好吃", "苹果此次召回还是没有中国"];
+		 var pArr=[];
+		 var text=my$("tet").value;
+		my$("tet").onkeyup=function(){
+			
+			// console.log(text);
+			if(my$("dv")){
+				my$("box").removeChild(my$("dv"));
+				pArr.length=0;
+			}
+			for(var i=0;i<keyWords.length;i++){
+				if(keyWords[i].indexOf(text)==0){
+					pArr.push(keyWords[i]);
+				}
+			}	
+			console.log(pArr);
+			// var dvObj=document.createElement("div");
+
+			// dvObj.id="dv";
+			// my$("box").appendChild(dvObj);
+			// for(var j=0;j<pArr.length;j++){
+			// 	var liObj=document.createElement("p");
+			// 	liObj.innerText="ahahah";
+			// 	my$("dv").appendChild(liObj);
+			// }
+		};
+		
+		
+	</script>
+</body>
+</html>

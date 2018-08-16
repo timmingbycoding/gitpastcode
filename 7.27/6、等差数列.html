@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- e.stopPropagetion();
+	window.event.cancelBubble=true; -->
+	<meta charset="UTF-8">
+	<title>成等差数列</title>
+	
+	<script src="commen.js"></script>
+	<style>
+		#dv1{
+			width: 400px;
+			height: 400px;
+			background-color: red;
+		
+		}
+		#dv2{
+			width: 300px;
+			height: 300px;
+			background-color: blue;
+		
+		}
+		#dv3{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		
+			
+		}
+	</style>
+</head>
+<body>
+	
+	
+	<div id="dv1">
+		<div id="dv2">
+			<div id="dv3">
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	<script>
+		my$("dv1").onclick=function(){
+			console.log(this.id+"显示了");
+		};
+		my$("dv2").onclick=function(e){
+			console.log(this.id+"显示了");
+			console.log(e);
+			// window.event.cancelBubble=true;
+		};
+		my$("dv3").onclick=function(e){
+			console.log(this.id+"显示了");
+			// e.stopPropagation();
+		};
+		document.body.onclick=function(){
+			console.log("颤抖吧废人");
+		};
+	</script>
+</body>
+</html>
+<!-- e.stopPropagetion();
+window.event.cancelBubble=true; -->
